@@ -1,0 +1,211 @@
+/* Reset básico e configuração da fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #111, #333);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: #ff5c57;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5c57;
+    border-bottom: 2px solid #ff5c57;
+}
+
+/* Estilo das seções */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+#descricao {
+    background-color: #222;
+    text-align: center;
+}
+
+#descricao h2 {
+    font-size: 2.5rem;
+    color: #ff5c57;
+    margin-bottom: 20px;
+}
+
+#descricao p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+#programacao {
+    background-color: #333;
+    text-align: center;
+}
+
+#programacao h2 {
+    font-size: 2.5rem;
+    color: #ff5c57;
+    margin-bottom: 20px;
+}
+
+#programacao ul {
+    list-style: none;
+    padding: 0;
+}
+
+#programacao li {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Galeria */
+#galeria {
+    background-color: #222;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 2.5rem;
+    color: #ff5c57;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+}
+
+footer .social-links a {
+    color: #ff5c57;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Media Queries - Responsividade */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #descricao p, #programacao ul {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header .logo h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #descricao h2, #programacao h2, #galeria h2 {
+        font-size: 2rem;
+    }
+
+    footer .social-links a {
+        font-size: 1rem;
+    }
+}
